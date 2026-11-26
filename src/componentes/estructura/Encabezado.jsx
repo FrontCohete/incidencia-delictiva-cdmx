@@ -23,7 +23,7 @@ export default function Encabezado({ tema, onAlternarTema }) {
       <div className={estilos.barra}>
         <a href="#inicio" className={estilos.marca} aria-label="Ir al inicio">
           <span className={estilos.glifo} aria-hidden="true" />
-          <span className={estilos.marcaTexto}>Alta incidencia</span>
+          <span className={estilos.marcaTexto}>Alta incidencia delictiva</span>
           <span className={estilos.marcaDato}>CDMX</span>
         </a>
 
