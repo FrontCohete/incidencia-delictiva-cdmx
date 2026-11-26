@@ -1,0 +1,55 @@
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 36px);
+}
+
+.concepto {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 14px;
+  padding: 14px 14px 20px;
+  border: 1px solid var(--linea-suave);
+  border-radius: var(--radio-l);
+  background: var(--superficie);
+}
+
+.titulo {
+  margin-top: 6px;
+  padding-inline: 6px;
+  font-family: var(--f-display);
+  font-size: var(--t-l);
+  font-stretch: 108%;
+  font-weight: 700;
+}
+
+.texto {
+  padding-inline: 6px;
+  color: var(--grafito);
+  font-size: var(--t-s);
+  line-height: 1.6;
+}
+
+.leyenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  padding: 12px 6px 0;
+  border-top: 1px solid var(--linea-suave);
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+  color: var(--grafito);
+}
+
+.leyenda li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+@media (max-width: 900px) {
+  .rejilla {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+}

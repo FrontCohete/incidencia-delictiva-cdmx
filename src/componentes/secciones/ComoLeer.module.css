@@ -1,0 +1,143 @@
+.disposicion {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: start;
+  gap: clamp(28px, 5vw, 72px);
+}
+
+.subtitulo {
+  margin-bottom: 20px;
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grafito);
+}
+
+.leyenda {
+  display: grid;
+  gap: 0;
+  padding: clamp(20px, 3vw, 28px);
+  border: 1px solid var(--linea-suave);
+  border-radius: var(--radio-l);
+  background: var(--fondo);
+}
+
+.leyenda .subtitulo {
+  margin-bottom: 4px;
+}
+
+.bloque {
+  display: grid;
+  gap: 14px;
+  padding-block: 20px;
+  border-bottom: 1px solid var(--linea-suave);
+}
+
+.bloque:last-child {
+  padding-bottom: 4px;
+  border-bottom: 0;
+}
+
+.bloqueTitulo {
+  font-family: var(--f-display);
+  font-size: var(--t-m);
+  font-stretch: 106%;
+  font-weight: 680;
+}
+
+.items {
+  display: grid;
+  gap: 10px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 14px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 12px;
+  color: var(--grafito);
+  font-size: var(--t-s);
+  line-height: 1.5;
+}
+
+.item strong {
+  color: var(--tinta);
+  font-weight: 600;
+}
+
+.gradiente {
+  height: 14px;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--calor-1) 0%,
+    var(--calor-2) 25%,
+    var(--calor-3) 50%,
+    var(--calor-4) 75%,
+    var(--calor-5) 100%
+  );
+}
+
+.extremos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -6px;
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+  color: var(--grafito);
+}
+
+.controles {
+  display: grid;
+  border-top: 1px solid var(--linea);
+}
+
+.control {
+  display: grid;
+  grid-template-columns: minmax(0, 200px) minmax(0, 1fr);
+  gap: 8px 28px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--linea-suave);
+}
+
+.controlNombre {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.controlTexto {
+  color: var(--grafito);
+  font-size: var(--t-s);
+  line-height: 1.6;
+}
+
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.opcion {
+  padding: 3px 9px 2px;
+  border: 1px solid var(--linea);
+  border-radius: 999px;
+  background: var(--fondo);
+  color: var(--tinta);
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+}
+
+@media (max-width: 960px) {
+  .disposicion {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .control {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,65 @@
+:root {
+  --fondo: #0f141b;
+  --superficie: #161d26;
+  --superficie-alta: #1c2531;
+  --tinta: #e4e9f0;
+  --grafito: #93a0b0;
+  --linea: #2a3441;
+  --linea-suave: #202935;
+  --acento: #7c9bff;
+  --acento-suave: rgba(124, 155, 255, 0.14);
+  --zona: #e8112d;
+  --zona-borde: #7a0010;
+  --zona-texto: #ff6b7d;
+  --zona-suave: rgba(232, 17, 45, 0.16);
+  --moderado: #e0a030;
+  --grave: #d0602a;
+  --muy-grave: #c23a5c;
+  --calor-1: #2c7bb6;
+  --calor-2: #abd9e9;
+  --calor-3: #ffffbf;
+  --calor-4: #fdae61;
+  --calor-5: #d7191c;
+  --sombra: 0 1px 2px rgba(0, 0, 0, 0.4), 0 14px 36px rgba(0, 0, 0, 0.45);
+  --velo: rgba(15, 20, 27, 0.86);
+
+  --f-display: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
+  --f-texto: 'Public Sans', system-ui, sans-serif;
+  --f-dato: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --t-xs: 0.75rem;
+  --t-s: 0.875rem;
+  --t-m: 1rem;
+  --t-l: 1.1875rem;
+  --t-xl: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --t-2xl: clamp(2rem, 1.4rem + 2.6vw, 3.25rem);
+  --t-hero: clamp(2.6rem, 1.2rem + 6.2vw, 6.4rem);
+
+  --radio: 6px;
+  --radio-l: 12px;
+  --ancho: 1200px;
+  --margen: clamp(20px, 5vw, 56px);
+  --encabezado: 64px;
+  --curva: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  color-scheme: dark;
+}
+
+[data-tema='claro'] {
+  --fondo: #edf0f3;
+  --superficie: #ffffff;
+  --superficie-alta: #f6f8fa;
+  --tinta: #16202c;
+  --grafito: #5b6676;
+  --linea: #cbd2da;
+  --linea-suave: #dde2e8;
+  --acento: #2450b8;
+  --acento-suave: rgba(36, 80, 184, 0.1);
+  --zona-texto: #b00d24;
+  --zona-suave: rgba(232, 17, 45, 0.1);
+  --muy-grave: #9c1c3c;
+  --sombra: 0 1px 2px rgba(22, 32, 44, 0.08), 0 10px 28px rgba(22, 32, 44, 0.1);
+  --velo: rgba(237, 240, 243, 0.88);
+
+  color-scheme: light;
+}

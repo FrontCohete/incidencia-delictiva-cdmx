@@ -1,0 +1,123 @@
+.pie {
+  border-top: 1px solid var(--linea);
+  background: var(--superficie);
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 40px clamp(32px, 5vw, 72px);
+  width: min(100% - 2 * var(--margen), var(--ancho));
+  margin-inline: auto;
+  padding-block: 56px 40px;
+}
+
+.titulo {
+  max-width: 22ch;
+  font-family: var(--f-display);
+  font-size: var(--t-xl);
+  font-stretch: 92%;
+  font-weight: 760;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.nota {
+  max-width: 42ch;
+  margin-top: 16px;
+  color: var(--grafito);
+  font-size: var(--t-s);
+}
+
+.encabezado {
+  margin-bottom: 14px;
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grafito);
+}
+
+.lista {
+  display: grid;
+  gap: 10px;
+  font-size: var(--t-s);
+}
+
+.perfil {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 32px;
+  text-decoration: none;
+}
+
+a.perfil:hover span {
+  color: var(--acento);
+}
+
+.externo {
+  color: var(--grafito);
+}
+
+.pendiente {
+  color: var(--grafito);
+}
+
+.proximamente {
+  padding: 2px 7px;
+  border: 1px dashed var(--linea);
+  border-radius: 4px;
+  font-family: var(--f-dato);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+}
+
+.enlace {
+  text-decoration-color: var(--linea);
+  text-underline-offset: 3px;
+}
+
+.enlace:hover {
+  color: var(--acento);
+  text-decoration-color: currentColor;
+}
+
+.enlaceLinea {
+  color: var(--grafito);
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 32px;
+  width: min(100% - 2 * var(--margen), var(--ancho));
+  margin-inline: auto;
+  padding-block: 20px 28px;
+  border-top: 1px solid var(--linea-suave);
+  color: var(--grafito);
+  font-size: var(--t-xs);
+}
+
+.subir {
+  font-family: var(--f-dato);
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 860px) {
+  .contenedor {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .identidad {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 520px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+  }
+}

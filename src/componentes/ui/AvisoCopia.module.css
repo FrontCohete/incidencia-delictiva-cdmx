@@ -1,0 +1,35 @@
+.aviso {
+  display: grid;
+  place-content: center;
+  gap: 16px;
+  min-height: 100vh;
+  padding: var(--margen);
+  text-align: center;
+}
+
+.etiqueta {
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--zona-texto);
+}
+
+.titulo {
+  max-width: 22ch;
+  margin-inline: auto;
+  font-family: var(--f-display);
+  font-size: var(--t-2xl);
+  font-stretch: 90%;
+  font-weight: 760;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.texto {
+  color: var(--grafito);
+}
+
+.texto a {
+  color: var(--acento);
+}

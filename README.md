@@ -1,0 +1,2 @@
+# Puntos de alta incidencia delictiva en Ciudad de México
+Sitio informativo con mapas interactivos de las zonas con mayor concentración de víctimas de delitos en las 16 alcaldías de la Ciudad de México (enero de 2022 a julio de 2024)

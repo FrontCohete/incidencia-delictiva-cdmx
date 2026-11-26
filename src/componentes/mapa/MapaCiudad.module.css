@@ -1,0 +1,68 @@
+.figura {
+  position: relative;
+}
+
+.plano {
+  width: 100%;
+  height: auto;
+  margin-inline: auto;
+  overflow: visible;
+}
+
+.alcaldia {
+  fill: var(--superficie);
+  stroke: var(--linea);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  cursor: pointer;
+  transition: fill 0.18s ease;
+}
+
+.alcaldia:hover,
+.alcaldia:focus-visible {
+  fill: var(--acento-suave);
+  outline: none;
+}
+
+.alcaldia:focus-visible {
+  stroke: var(--acento);
+  stroke-width: 4;
+}
+
+.activa,
+.activa:hover {
+  fill: var(--acento-suave);
+}
+
+.contorno {
+  fill: none;
+  stroke: var(--acento);
+  stroke-width: 4;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.zonas {
+  pointer-events: none;
+}
+
+.muyAlta {
+  fill: var(--zona);
+  fill-opacity: 0.85;
+}
+
+.alta {
+  fill: none;
+  stroke: var(--zona);
+  stroke-width: 2;
+}
+
+.rotulo {
+  min-height: 1.4em;
+  margin-top: 8px;
+  color: var(--grafito);
+  font-family: var(--f-dato);
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  text-align: center;
+}

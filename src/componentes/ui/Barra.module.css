@@ -1,0 +1,27 @@
+.barra {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.fondo {
+  fill: var(--linea-suave);
+}
+
+.zona {
+  fill: var(--zona);
+}
+
+.zonaTenue {
+  fill: var(--zona);
+  fill-opacity: 0.38;
+}
+
+.acento {
+  fill: var(--acento);
+}
+
+.grafito {
+  fill: var(--grafito);
+}

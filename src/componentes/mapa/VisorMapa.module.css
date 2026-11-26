@@ -1,0 +1,98 @@
+.visor {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-l);
+  background: var(--superficie);
+  box-shadow: var(--sombra);
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px 12px 18px;
+  border-bottom: 1px solid var(--linea);
+}
+
+.nombre {
+  display: grid;
+  gap: 2px;
+  font-family: var(--f-display);
+  font-size: var(--t-l);
+  font-stretch: 110%;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.etiqueta {
+  font-family: var(--f-dato);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grafito);
+}
+
+.abrir {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--acento);
+  color: var(--fondo);
+  font-size: var(--t-s);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: filter 0.2s ease;
+}
+
+.abrir:hover {
+  filter: brightness(1.08);
+}
+
+.lienzo {
+  position: relative;
+  display: grid;
+  height: clamp(520px, 82vh, 880px);
+  background: var(--fondo);
+}
+
+.cargando {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--grafito);
+  font-family: var(--f-dato);
+  font-size: var(--t-s);
+}
+
+.marco {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 560px) {
+  .abrir span {
+    display: none;
+  }
+
+  .abrir {
+    width: 40px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .lienzo {
+    height: 78vh;
+  }
+}

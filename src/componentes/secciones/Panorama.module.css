@@ -1,0 +1,364 @@
+.cifras {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin: 0 0 clamp(48px, 6vw, 80px);
+  border-top: 1px solid var(--linea);
+}
+
+.cifra {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 22px clamp(12px, 2vw, 28px) 0 0;
+}
+
+.cifra + .cifra {
+  padding-left: clamp(12px, 2vw, 28px);
+  border-left: 1px solid var(--linea-suave);
+}
+
+.cifraValor {
+  margin: 0;
+  font-family: var(--f-display);
+  font-size: clamp(2.1rem, 1.4rem + 2.4vw, 3.4rem);
+  font-stretch: 125%;
+  font-weight: 640;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+
+.cifraTexto {
+  max-width: 24ch;
+  color: var(--grafito);
+  font-size: var(--t-s);
+  line-height: 1.45;
+}
+
+.paneles {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 36px);
+  margin-bottom: clamp(48px, 6vw, 80px);
+}
+
+.panel {
+  display: grid;
+  align-content: start;
+  gap: 22px;
+  padding: clamp(20px, 3vw, 32px);
+  border: 1px solid var(--linea-suave);
+  border-radius: var(--radio-l);
+  background: var(--fondo);
+}
+
+.panelTitulo h3 {
+  font-family: var(--f-display);
+  font-size: var(--t-l);
+  font-stretch: 108%;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.panelTitulo p {
+  margin-top: 6px;
+  color: var(--grafito);
+  font-size: var(--t-s);
+}
+
+.barras {
+  display: grid;
+  gap: 14px;
+}
+
+.fila {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 6px 16px;
+  align-items: baseline;
+  font-size: var(--t-s);
+}
+
+.filaEtiqueta {
+  line-height: 1.35;
+}
+
+.horario {
+  margin-left: 4px;
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+  color: var(--grafito);
+}
+
+.filaValor {
+  font-family: var(--f-dato);
+  font-size: var(--t-s);
+  font-variant-numeric: tabular-nums;
+}
+
+.filaBarra {
+  grid-column: 1 / -1;
+}
+
+.notaPanel {
+  padding-top: 14px;
+  border-top: 1px solid var(--linea-suave);
+  color: var(--grafito);
+  font-size: var(--t-s);
+}
+
+.ranking {
+  display: grid;
+  gap: 20px;
+}
+
+.rankingCabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px 32px;
+}
+
+.rankingTitulo {
+  font-family: var(--f-display);
+  font-size: var(--t-xl);
+  font-stretch: 112%;
+  font-weight: 700;
+}
+
+.rankingLeyenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+  color: var(--grafito);
+}
+
+.rankingLeyenda li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.clave {
+  width: 18px;
+  height: 10px;
+  border-radius: 2px;
+  background: var(--zona);
+}
+
+.claveAlta {
+  opacity: 0.38;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--t-s);
+}
+
+.tabla thead th {
+  padding: 0 16px 12px 0;
+  border-bottom: 1px solid var(--linea);
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--grafito);
+}
+
+.tabla tbody tr {
+  border-bottom: 1px solid var(--linea-suave);
+  transition: background-color 0.15s ease;
+}
+
+.tabla tbody tr:hover {
+  background: var(--acento-suave);
+}
+
+.tabla td,
+.tabla tbody th {
+  padding: 14px 16px 14px 0;
+  vertical-align: middle;
+}
+
+.nombre {
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.zonas {
+  width: 32%;
+  min-width: 200px;
+}
+
+.zonasCifra {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.zonasCifra strong {
+  font-family: var(--f-display);
+  font-size: 1.25rem;
+  font-stretch: 115%;
+  font-weight: 680;
+  font-variant-numeric: tabular-nums;
+}
+
+.zonasCifra span {
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+  color: var(--grafito);
+}
+
+.numerica {
+  text-align: right;
+}
+
+.tabla thead th.numerica {
+  text-align: right;
+}
+
+.dato {
+  font-family: var(--f-dato);
+  font-variant-numeric: tabular-nums;
+}
+
+.delito {
+  color: var(--grafito);
+  padding-left: 24px;
+}
+
+.accion {
+  text-align: right;
+}
+
+.tabla td.accion {
+  padding-right: 0;
+}
+
+.ver {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--linea);
+  border-radius: 999px;
+  background: transparent;
+  font-size: var(--t-s);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.ver:hover {
+  border-color: var(--acento);
+  color: var(--acento);
+}
+
+.notaTabla {
+  max-width: 78ch;
+  color: var(--grafito);
+  font-size: var(--t-s);
+}
+
+@media (max-width: 960px) {
+  .cifras {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cifra:nth-child(3) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .cifra:nth-child(n + 3) {
+    margin-top: 12px;
+    border-top: 1px solid var(--linea-suave);
+  }
+
+  .paneles {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .tabla thead {
+    display: none;
+  }
+
+  .tabla,
+  .tabla tbody,
+  .tabla tr {
+    display: block;
+  }
+
+  .tabla tbody tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px 16px;
+    padding: 16px 0;
+  }
+
+  .tabla td,
+  .tabla tbody th {
+    padding: 0;
+  }
+
+  .nombre {
+    align-self: center;
+  }
+
+  .zonas {
+    grid-column: 1 / -1;
+    width: auto;
+    min-width: 0;
+  }
+
+  .dato,
+  .delito {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding-left: 0;
+    text-align: right;
+  }
+
+  .dato::before,
+  .delito::before {
+    content: attr(data-etiqueta);
+    font-family: var(--f-dato);
+    font-size: var(--t-xs);
+    color: var(--grafito);
+    text-align: left;
+  }
+
+  .accion {
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .cifras {
+    grid-template-columns: 1fr;
+  }
+
+  .cifra + .cifra {
+    padding-left: 0;
+    border-left: 0;
+    margin-top: 12px;
+    border-top: 1px solid var(--linea-suave);
+  }
+}

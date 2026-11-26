@@ -1,0 +1,164 @@
+.disposicion {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+  align-items: start;
+  gap: clamp(32px, 5vw, 72px);
+}
+
+.pasos {
+  position: relative;
+  display: grid;
+}
+
+.pasos::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 19px;
+  width: 1px;
+  background: var(--linea);
+}
+
+.paso {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 20px;
+  padding-bottom: 32px;
+}
+
+.paso:last-child {
+  padding-bottom: 0;
+}
+
+.numero {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--linea);
+  border-radius: 50%;
+  background: var(--fondo);
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+  color: var(--grafito);
+}
+
+.paso:nth-child(5) .numero {
+  border-color: var(--zona);
+  color: var(--zona-texto);
+}
+
+.pasoTitulo {
+  padding-top: 8px;
+  font-family: var(--f-display);
+  font-size: var(--t-l);
+  font-stretch: 108%;
+  font-weight: 700;
+}
+
+.pasoTexto {
+  max-width: 64ch;
+  margin-top: 8px;
+  color: var(--grafito);
+  line-height: 1.7;
+}
+
+.lateral {
+  position: sticky;
+  top: calc(var(--encabezado) + 24px);
+  display: grid;
+  gap: 16px;
+}
+
+.caja {
+  padding: 20px 22px;
+  border: 1px solid var(--linea-suave);
+  border-radius: var(--radio-l);
+  background: var(--superficie);
+}
+
+.cajaTitulo {
+  margin-bottom: 14px;
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grafito);
+}
+
+.ficha {
+  display: grid;
+}
+
+.fichaFila {
+  display: grid;
+  gap: 2px;
+  padding: 9px 0;
+  border-top: 1px solid var(--linea-suave);
+  font-size: var(--t-s);
+}
+
+.fichaFila dt {
+  color: var(--grafito);
+  font-size: var(--t-xs);
+}
+
+.fichaFila dd {
+  font-family: var(--f-dato);
+}
+
+.fuentes {
+  display: grid;
+  gap: 12px;
+}
+
+.fuente {
+  display: grid;
+  gap: 2px;
+  text-decoration: none;
+}
+
+.fuenteNombre {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--t-s);
+  font-weight: 600;
+}
+
+.fuente:hover .fuenteNombre {
+  color: var(--acento);
+}
+
+.fuenteDetalle {
+  color: var(--grafito);
+  font-size: var(--t-xs);
+}
+
+.herramientas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.herramientas li {
+  padding: 3px 9px 2px;
+  border: 1px solid var(--linea);
+  border-radius: 999px;
+  font-family: var(--f-dato);
+  font-size: var(--t-xs);
+}
+
+@media (max-width: 960px) {
+  .disposicion {
+    grid-template-columns: 1fr;
+  }
+
+  .lateral {
+    position: static;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
